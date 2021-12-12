@@ -3,10 +3,7 @@ import { galleryItems } from "./gallery-items.js";
 
 console.log(galleryItems);
 
-// 1...Создание и рендер разметки по массиву данных galleryItems
-// и предоставленному шаблону элемента галереи. done!!!
-
-// ==================task 1.1========================
+// ==================task 2.1========================
 
 const galleryBox = document.querySelector(".gallery");
 const imagesMurkup = createGalleryItems(galleryItems);
@@ -23,10 +20,7 @@ function createGalleryItems(images) {
     .join("");
 }
 
-// 2...Реализация делегирования на div.gallery и получение url
-// большого изображения.
-
-// ==================task 1.2========================
+// ==================task 2.2========================
 
 new SimpleLightbox(".gallery a", {
   captionsData: "alt",
@@ -35,8 +29,3 @@ new SimpleLightbox(".gallery a", {
   scrollZoomFactor: 0.5,
   captionPosition: "bottom",
 });
-
-//   gallery.next();
-
-// console.log(window.simplelightbox);
-// console.log(e.target.dataset.source);
