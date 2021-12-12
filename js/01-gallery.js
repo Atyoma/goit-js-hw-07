@@ -84,6 +84,6 @@ function onGalleryBoxClick(e) {
 // окне перед открытием.Используй готовую разметку модального
 // окна с изображением из примеров библиотеки basicLightb
 
-function onCloseModal(e) {
-  close(basicLightbox);
-}
+// function onCloseModal(e) {
+//   close(basicLightbox);
+// }

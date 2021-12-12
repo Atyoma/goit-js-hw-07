@@ -16,9 +16,9 @@ galleryBox.insertAdjacentHTML("beforeend", imagesMurkup);
 function createGalleryItems(images) {
   return images
     .map(({ preview, original, description }) => {
-      return `<a class="gallery__item" href="${original}">
+      return `<li><a class="gallery__item" href="${original}">
   <img class="gallery__image" src="${preview}" alt="${description}" />
-</a>`;
+</a></li>`;
     })
     .join("");
 }
@@ -28,22 +28,15 @@ function createGalleryItems(images) {
 
 // ==================task 1.2========================
 
-galleryBox.addEventListener("click", onGalleryBoxClick);
+new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+  ceptionType: "alt",
+  scrollZoomFactor: 0.5,
+  captionPosition: "bottom",
+});
 
-function onGalleryBoxClick(e) {
-  e.preventDefault();
-  if (!e.target.classList.contains("gallery__image")) {
-    return;
-  }
-  new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-    ceptionType: "alt",
-    scrollZoomFactor: 0.5,
-    captionPosition: "bottom",
-  });
+//   gallery.next();
 
-  //   gallery.next();
-}
 // console.log(window.simplelightbox);
 // console.log(e.target.dataset.source);
